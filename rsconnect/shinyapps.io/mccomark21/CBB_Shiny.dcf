@@ -1,0 +1,12 @@
+name: CBB_Shiny
+title: CBB_Shiny
+username:
+account: mccomark21
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 569186
+bundleId: 1699295
+url: https://mccomark21.shinyapps.io/CBB_Shiny/
+when: 1542147287.76605
+asMultiple: FALSE
+asStatic: FALSE

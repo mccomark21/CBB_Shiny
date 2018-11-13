@@ -3,13 +3,14 @@ server <- function(input, output, session) {
   
   output$scat <- renderPlotly(
     {
-      p <- ggplot(filtered_data(), aes(x = `Per Game 3P`,y = `Per Game 2P`, Player = Player))+
+      p <- ggplot(filtered_data(), aes(x = `Per Game 3P`,y = `Per Game 2P`, Player = Player, color = `TS%`))+
+        geom_point()+
         labs(title = "2P Shots vs 3P Shots", x = "3P Made Per Game", y = "2P Made Per Game", color = "Legend\n")+
-        geom_point(color = 'darkblue')+
-        scale_color_discrete(breaks=c("Lottery","Late 1st Round","2nd Round"))+
+        scale_color_gradientn(colours = c("darkblue","lightblue","yellow","orange","red"),
+                              values = c(1.0,0.8,0.6,0.4,0.2,0))+
         theme_bw()
       
-      ggplotly(p, tooltip = c("Player","x","y"))    
+      ggplotly(p, tooltip = c("Player","x","y","TS%"))    
     }
   )
   output$bar <- renderPlotly(
