@@ -22,7 +22,7 @@ server <- function(input, output, session) {
         geom_text(aes(y = FT_Points, label = round(FT_Points, 2)), vjust = 1.4, color = "black", size = 4) +
         scale_fill_manual('',labels = 'Points Per Game', values = 'seagreen3') + # change bar colors
         scale_color_manual('',labels = 'FT Point %', values = 'black')+
-        labs(title = "Top Scorer VS % of Points From Free Throws\n", x = "Top 5 Scorers", y = "Points Per Game", color = "Legend\n")+
+        labs(title = "Top Scorer vs % of Points From Free Throws\n", x = "Top 5 Scorers", y = "Points Per Game", color = "Legend\n")+
         theme_bw()+
         theme(axis.text.x=element_text(angle=90,hjust=1))
       
